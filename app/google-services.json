@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "307064729905",
+    "firebase_url": "https://my-application-f76ff.firebaseio.com",
+    "project_id": "my-application-f76ff",
+    "storage_bucket": "my-application-f76ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307064729905:android:6fe1cb099e907a03a8c010",
+        "android_client_info": {
+          "package_name": "com.safdar.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307064729905-8dov1su431834mb9h148a3jp922ofu6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFHYcqkqKgzciaAMoRB6ZvaYdhK-6E_EM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307064729905-8dov1su431834mb9h148a3jp922ofu6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
